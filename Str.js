@@ -63,7 +63,9 @@
         message = message.replace(regexp, replacement);
       } else if (_.isArray(replacement)) {
         message = message.replace(regexp, function (matched) {
-          return replacement[increment] ? replacement[increment++] : matched;
+          var index = replacers.indexOf(matched);
+
+          return replacement[index] ? replacement[index] : matched;
         });
       } else if (_.isObject(replacement)) {
         regexp = new RegExp('('+ replacers.join('|') +')');

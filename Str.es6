@@ -34,7 +34,10 @@ class Str {
         message = message.replace(regexp, replacement);
       } else if (_.isArray(replacement)) {
         message = message.replace(regexp, (matched) => {
-          return replacement[increment] ? replacement[increment++] : matched;
+          let index = replacers.indexOf(matched);
+
+          return replacement[index] ? replacement[index] : matched;
+
         });
       } else if (_.isObject(replacement)) {
         regexp = new RegExp('('+ replacers.join('|') +')');
