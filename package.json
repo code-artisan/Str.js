@@ -1,8 +1,8 @@
 {
-  "name": "Str.js",
-  "version": "1.0.3",
+  "name": "str-help",
+  "version": "2.0.0",
   "description": "",
-  "main": "./Str.es6",
+  "main": "./index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack -p -w",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -2,7 +2,7 @@ var path = require('path');
 
 module.exports = {
   cache: true,
-  entry: './Str.es6',
+  entry: './index.es6',
   module: {
     loaders: [
       {
